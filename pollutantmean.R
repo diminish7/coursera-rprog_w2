@@ -1,5 +1,5 @@
 pollutantmean <- function(directory, pollutant, id=1:332) {
-        all = NULL
+        all = numeric()
         for (i in id) {
                 file <- file.path(directory, paste(sprintf("%03d", i), ".csv", sep=""))
                 data <- read.csv(file, header=TRUE)
